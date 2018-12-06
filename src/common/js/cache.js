@@ -10,14 +10,19 @@ const LIKE_KEY = '__LIKE__'
 const LIKE_MAX_LENGTH = 200
 
 function insertArray(arr, val, compare, maxLength) {
+  // 查找出数组中符合条件的数据的索引
   let index = arr.findIndex(compare)
+  // 如果该数据已经是在第一个了就直接退出
   if (index === 0) {
     return
   }
+  // 如果数组中有该数据并且数据不在第一个，就将原数据从数组中删除。
   if (index > 0) {
     arr.splice(index, 1)
   }
+  // 将数据添加到数组的第一位上去
   arr.unshift(val)
+  // 如果传入了数组的最大长度，并且添加之后数组长度大于最大的长度，将数组最后一位删除。
   if (maxLength && arr.length > maxLength) {
     arr.pop()
   }

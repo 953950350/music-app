@@ -32,6 +32,7 @@ export default {
     }
   },
   created() {
+    // 使用节流函数减少发送请求的数量。
     this.$watch('query', debounce(newQuery => {
       this.$emit('query', newQuery)
     }, 200))

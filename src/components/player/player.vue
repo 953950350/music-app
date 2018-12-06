@@ -140,7 +140,7 @@ export default {
     },
     cdCls() {
       if (!this.playing && this.$refs.cd) {
-        // 然外部盒子旋转到当前图片的位置，然后再移除图片的类名
+        // 让外部盒子旋转到当前图片的位置，然后再移除图片的类名
         let cd = this.$refs.cd
         let Img = this.$refs.cdImg
         let cdTransform = getComputedStyle(cd).transform

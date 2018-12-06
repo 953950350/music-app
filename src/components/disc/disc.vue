@@ -32,7 +32,6 @@ export default {
   },
   methods: {
     _getSongList(dissid) {
-      // 判断是否获取到singer的数据，如果没有就跳转至歌手列表页面
       if (!this.disc.dissid) {
         this.$router.push('/recommend')
         return

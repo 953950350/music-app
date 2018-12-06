@@ -36,6 +36,7 @@ export default {
     this.$watch('query', debounce(newQuery => {
       this.$emit('query', newQuery)
     }, 200))
+    console.log("git test")
   }
 }
 </script>
